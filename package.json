@@ -1,0 +1,23 @@
+{
+  "name": "a-tale-of-two-asyncs",
+  "version": "1.0.0",
+  "description": "how language values shape the features we build and the journeys we take to design them",
+  "main": "index.js",
+  "scripts": {
+    "start": "simple-server ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ashleygwilliams/a-tale-of-two-asyncs.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ashleygwilliams/a-tale-of-two-asyncs/issues"
+  },
+  "homepage": "https://github.com/ashleygwilliams/a-tale-of-two-asyncs#readme",
+  "dependencies": {
+    "simple-server": "^1.1.1"
+  }
+}

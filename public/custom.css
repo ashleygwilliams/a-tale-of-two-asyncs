@@ -1,0 +1,74 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans|Playfair+Display');
+
+.remark-slide-container {
+  background-color: #FDFEFE;
+}
+
+body {
+  font-family: 'Playfair Display', serif;
+}
+
+h1, h2, h3, h4, h5, .overlay {
+  font-family: 'Playfair Display', serif;
+  font-weight: 400;
+}
+
+img {
+  background-color: white;
+  padding: 10px;
+  border: solid 1px black;
+  width: 100%;
+  margin: 15px 0;
+}
+
+.column.right {float:left}
+.column.left {float:right}
+
+.column { 
+  width: 45%;
+}
+
+p {
+  text-align: center;
+}
+
+.column h1, h2, h3, h4, h5 {
+  text-align: center;
+}
+
+.column h1 {
+  font-size: 3em;
+  padding: 0;
+  margin: 15px 0;
+}
+
+.column h2 {
+  font-size: 2em;
+  padding: 0;
+  margin: 15px 0;
+  color: darkgrey;
+  font-style: italic;
+}
+
+.column h3 {
+  font-size: 1.5em;
+  padding: 0;
+  margin: 10px 0;
+}
+
+.overlay {
+  position: fixed;
+  color: white;
+  font-size: 2em;
+  top: 5.3em;
+  width: 35%;
+  text-align: center;
+  margin-left: 0.5em;
+}
+
+span.caption {
+  font-size: 0.6em;
+  font-style: italic;
+  position: relative;
+  top: -10px;
+}
