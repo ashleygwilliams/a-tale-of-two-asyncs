@@ -13,6 +13,22 @@ h1, h2, h3, h4, h5, .overlay {
   font-weight: 400;
 }
 
+.smaller img {
+  width: 80%;
+}
+
+.half img {
+  width: 50%;
+}
+
+.sixtyfive img {
+  width: 65%;
+}
+
+.more-padding img {
+  padding: 40px;
+}
+
 img {
   background-color: white;
   padding: 10px;
@@ -21,15 +37,34 @@ img {
   margin: 15px 0;
 }
 
+.emoji img {
+  padding: 20px;
+  width: 20%;
+  margin: 0 20px;
+}
+
+pre {
+  background-color: lightgrey;
+  padding: 10px;
+  margin: 10px;
+  border: solid black 1px;
+}
+
 .column.right {float:left}
 .column.left {float:right}
 
-.column { 
-  width: 45%;
+.column20 {
+  width: 20%;
+  float: left;
 }
 
-p {
-  text-align: center;
+.column80 {
+  width: 70%;
+  float: right;
+}
+
+.column { 
+  width: 45%;
 }
 
 .column h1, h2, h3, h4, h5 {
@@ -71,4 +106,31 @@ span.caption {
   font-style: italic;
   position: relative;
   top: -10px;
+  float: left;
+}
+
+blockquote p {
+  text-align: left;
+  font-size: 1.4em;
+  font-style: italic;
+}
+
+blockquote::before {
+  content: '“';
+  position: absolute;
+  display: inline-block;
+  margin-top: -0.4em;
+  left: 70px;
+  font-size: 90px;
+}
+
+.footnote {
+  position: absolute;
+  bottom: 20px;
+  left: 40px;
+  font-size: 0.5em;
+  font-weight: 400;
+  font-style: italic;
+  color: darkgray;
+  margin-right: 20px;
 }

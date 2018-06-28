@@ -13,27 +13,714 @@ class: 2-col
 .column.right[
 <br/>
 # A Tale of Two Asyncs,
+<hr/>
 ## or: How Language Values Shape the Features We Build
 <br/>
 <br/>
-Ashley Williams, [workerconf 2018]
+.center[Ashley Williams, [workerconf 2018]]
 ]
 
 .column.left[
 .overlay[and the Journeys We Take to Design Them]
 ![path](public/img/path1.jpg)
-.caption[Fig. 1 The path looks pleasant so far]
+.caption[Fig. 1: The path looks pleasant so far]
 ]
 
 [workerconf 2018]: https://worker.sh/
 
 ---
+class: 2-col
+
+.column.left[
+  <br/>
+  <br/>
+  <br/>
+  # hi, i'm [ag_dubs]
+  [ag_dubs]: https://twitter.com/ag_dubs
+]
+
+.column.right[
+  ![ashley dressed like a crab](public/img/crabshly.jpg)
+  .caption[Fig. 2: Dressing like a crab brings me closer to the metal]
+]
+
+---
 class: middle, center
 
-# hi, i'm [ag_dubs]
+.smaller[.more-padding[![nodejs](public/img/nodejs.png)]]
 
-[ag_dubs]: https://twitter.com/ag_dubs
+# Board of Directors
 
+---
+class: middle, center
+
+.smaller[![i used to work at npm](public/img/realeyes.jpg)]
+
+---
+class: middle, center
+
+.smaller[![nodetogether](public/img/nodetogether.png)]
+
+---
+class: middle, center
+
+.smaller[![invited expert](public/img/invitedexpert.png)]
+
+---
+class: middle, center
+
+![mozilla](public/img/mozilla.png)
+
+---
+class: 2-col
+
+.column20.right[
+  .more-padding[.smaller[![rust](public/img/rust-logo.png)]]
+]
+
+.column80.left[
+- ## .left[Core Team]
+- ## .left[Community Team Lead]
+- ## .left[crates.io Infra Lead]
+- ## .left[Cargo Team]
+- ## .left[Rust-wasm Working Group]
+]
+
+---
+class: middle, center
+
+.smaller[.more-padding[![rustwasm](public/img/wasm-ferris.png)]]
+
+---
+class: middle, center
+
+![rustbridge](public/img/rustbridge.jpg)
+
+---
+class: middle, center
+
+![rustbridge](public/img/rustbridge2.jpg)
+
+---
+class: middle, center
+
+![rustbridge](public/img/rustbridge-rbr.jpg)
+
+---
+class: middle, center
+
+![rustbridge](public/img/rustbridge-paris.jpg)
+
+---
+class: middle, center
+
+# I love teaching programming.
+
+---
+class: middle, center
+
+# I love programming langauges.
+
+---
+class: middle, center
+
+# I like thinking about thinking...
+
+--
+
+# especially the type of thinking that happens when people write code.
+
+---
+class: middle, center
+
+![graduation](public/img/graduation.jpg)
+.caption[Fig. X: A proud, hungover, not-Computer-Science major who should not have cut her own bangs but did anyways]
+
+---
+class: middle, center
+
+# The goal of this talk is to explore two "languages" I love:
+# Node.js and Rust.
+
+.emoji[![heart](public/img/sparkle-heart.png)]
+.emoji[![heart](public/img/sparkle-heart.png)]
+.emoji[![heart](public/img/sparkle-heart.png)]
+
+---
+class: middle, center
+
+# Let's get philosophical...
+
+---
+class: 2-col
+
+.column.left[
+# .left[Genealogy]
+<hr/>
+
+In philosophy, genealogy is a historical technique in which one questions the commonly understood emergence of various philosophical and social beliefs by attempting to account for the scope, breadth or totality of discourse, thus extending the possibility of analysis... 
+
+### .left[Moreover, a genealogy often attempts to look beyond the discourse in question toward the conditions of its possibility.]
+]
+
+.column.right[
+  ![nietzsche- the genealogy of morals](public/img/nietzsche.jpg)
+  .caption[Fig. 2: This mustache would like to point out you've done a bad job of questioning the origin of your values]
+]
+
+.footnote[[Wikipedia, "Genealogy (philosophy)"](https://en.wikipedia.org/wiki/Genealogy_(philosophy))]
+
+---
+class: 2-col
+
+.column.right[
+<br/>
+> The point of a genealogical analysis is to show that a given system of thought was the result of contingent turns of history, not the outcome of rationally inevitable trends.
+]
+
+.column.left[
+  ![foucault](public/img/foucault.jpg)
+  .caption[Fig. 3: Michel Foucault is here to remind you that systems are emergent and often not a result of our conscious will]
+]
+
+.footnote[[Standford Encyclopedia of Philosophy. Michel Foucault: 3.3 From Archaeology to Geneaology](https://plato.stanford.edu/entries/foucault/?PHPSESSID=a67db9e6ad2d681797b094696328bf4a#ArchGene)]
+
+---
+class: middle, center
+
+![shit happens](public/img/shithappens.png)
+.caption[Fig. 4: She's not wrong]
+
+.footnote[https://twitter.com/emilyst/status/1010962266609541120]
+
+---
+class: middle, center
+
+## Geneaology is an investigation into those elements which
+# "we tend to feel [are] without history"
+
+.footnote[Foucault, Michel (1980). Language, Counter-Memory, Practice: Selected Essays and Interviews. Ithaca, NY: Cornell University Press. p. 139. ISBN 0-8014-9204-1.]
+
+---
+class: middle, center
+
+# Programming languages are deeply complex, historical artifacts and agents ...
+
+--
+
+## but we rarely think of them as such.
+
+---
+class: middle
+
+![thomas kuhn](public/img/kuhn.jpg)
+.caption[Fig. 7 Thomas Kuhn has trippy ideas about how ideas can and do change over time]
+
+> Scientists work from models acquired through education and literature often without quite knowing or needing to know what characteristics have given these models the status of community paradigms.
+
+.footnote[Kuhn, Thomas. "The Structure of Scientific Revolutions", pg 46 (1962)]
+
+---
+class: 2-col
+
+.column.right[
+  ![genealogy of programming languages](public/img/languages.png)
+  .caption[Fig. X: This diagram definitely obviously makes sense.]
+]
+
+.column.left[
+  <br/>
+  # .left[What is the best first programming language?]
+]
+
+.footnote[Farooq MS, Khan SA, Ahmad F, Islam S, Abid A (2014) An Evaluation Framework and Comparative Analysis of the Widely Used First Programming Languages. PLoS ONE 9(2): e88941. https://doi.org/10.1371/journal.pone.0088941]
+
+---
+class: middle, center
+
+![it's a trap](public/img/trap.gif)
+.caption[Fig. X: I wish the fools on the internet would realize this.]
+
+---
+class: middle, center
+
+![tools](public/img/tools.png)
+.caption[Fig. X: If you are using these tools you are way closer to the metal than I am. Maybe you are too close.]
+
+# "Best Tool for the Job"
+
+---
+class: middle, center
+
+# What do programming languages want?
+
+---
+class: middle, center
+
+# .left[Programming Paradigms]
+<hr/>
+
+> A programming paradigm is an approach to programming a computer based on a mathematical theory or a coherent set of principles. Each paradigm supports a set of concepts that makes it the best for a certain kind of problem.
+
+.footnote[https://www.info.ucl.ac.be/~pvr/paradigmsDIAGRAMeng108.pdf]
+
+---
+class: 2-col
+
+.column.left[
+  ![peter van roy](public/img/petervanroy.jpg)
+  .caption[Fig. 6: Computer Science is very very serious]
+]
+
+.column.right[
+  <br/>
+  # The Paradigm Paradox
+  <hr/>
+  > More is not better (or worse) than less, just different.
+]
+
+.footnote[[Van Roy, Peter. "Programming Paradigms for Dummies: What Every Programmer Should Know". pg 1](https://www.info.ucl.ac.be/~pvr/VanRoyChapter.pdf)]
+
+---
+class: middle, center
+
+![priciple programming paradigms](public/img/paradigms.png)
+.caption[Fig. 5: Peter Van Roy's Paradgim Genealogy]
+
+.footnote[https://www.info.ucl.ac.be/~pvr/paradigmsDIAGRAMeng108.pdf]
+
+---
+class: middle, center
+
+# What type of language does Node.js want to be?
+
+---
+class: middle
+
+> The way we are thinking about I/O makes things difficult.
+
+![ryan dahl](public/img/dahl1.png)
+.caption[Fig. X: The font-size on that slide also makes I/O difficult.]
+
+.footnote[[Ryan Dahl: Original Node.js presentation (JSConf 2009). JS Conf EU.Published 8 Jun 2012.](https://www.youtube.com/watch?v=ztspvPYybIY)]
+
+---
+
+# Asynchronous Programming
+<br/>
+> Who can wait quietly while the mud settles?
+Who can remain still until the moment of action?
+
+#### .right[Laozi, Tao Te Ching]
+<br/>
+### .left[Asynchronous programming makes it possible to express waiting for long-running actions without freezing the program during these actions.]
+
+.footnote[Haverbeke, Marijn. Eloquent Javascript. https://eloquentjavascript.net/11_async.html]
+
+---
+class: middle, left
+
+```
+var result =
+  db.query("select * from ?");
+
+// use result
+```
+
+# What is the software doing while it queries the database?
+
+---
+class: middle, center
+
+![c10k problem](public/img/c10k.png)
+
+.footnote[Kegel, Dan. http://www.kegel.com/c10k.html. 1999]
+
+---
+class: middle, center
+
+# Solution 1: Threads
+
+![kitten with thread](public/img/kittenthreads.jpg)
+.caption[Fig. X: Kitten used thread! Ryan Dahl does not care for this one bit.]
+
+---
+class: middle, center
+
+> Threaded concurrency is a leaky abstraction. It creates pains. You have memory problems. It's hard to think about. It's not a good abstraction for what's happening on your computer.
+
+.footnote[[Ryan Dahl: Original Node.js presentation (JSConf 2009). JS Conf EU.Published 8 Jun 2012.](https://www.youtube.com/watch?v=ztspvPYybIY)]
+
+---
+class: middle, center
+
+![nginx vs apache reqs per sec](public/img/nginx-apache-reqs-sec.png)
+.right[.caption[Fig. X: There's a lot going on here, but the main takeway is that both nginx and apache can support a whole bunch of concurrent connections.]]
+
+.footnote[https://blog.webfaction.com/2008/12/a-little-holiday-present-10000-reqssec-with-nginx-2/. 18 Dec 2008]
+---
+class: middle, center
+
+![nginx vs apache concurrency vs memory](public/img/nginx-apache-memory.png)
+.caption[Fig. X: Apache's memory usage grows with concurrent connections in benchmark with dubious design.]
+
+.footnote[https://blog.webfaction.com/2008/12/a-little-holiday-present-10000-reqssec-with-nginx-2/. 18 Dec 2008]
+
+---
+class: 2-col
+
+.column.left[
+  <br/>
+  <br/>
+  # Threads are expensive
+]
+
+.column.right[
+  ![expensive threads](public/img/expensivethreads.png)
+  .caption[Fig. X: I know, I know. This is fur and not even threads. But you get the joke. Also don't buy fur, mmkay?]
+]
+
+---
+class: middle, center
+
+# Solution 2.1: Reactor Pattern
+
+.smaller[![reactor pattern](public/img/reactorpattern.png)]
+
+.left[.footnote[Schmidt, Douglas C. Reactor: An Object Behavioral Pattern for Demultiplexing and Dispatching Handles for Synchronous Events. https://www.cse.wustl.edu/~schmidt/PDF/reactor-siemens.pdf]]
+---
+class: middle, center
+
+# Solution 2.2a: `libuv`
+
+.half[.more-padding[![reactor pattern](public/img/libuv.png)]]
+
+---
+class: middle, center
+
+# Solution 2.2b: Node.js Event Loop
+
+![reactor pattern](public/img/nodejssystem.jpeg)
+
+---
+class: middle, center
+
+.smaller[![raushma](public/img/raushma.png)]
+
+.footnote[https://twitter.com/rauschma/status/496213393146404864]
+---
+class: middle, center
+
+> Callbacks is how I/O should work.
+
+![call me back maybe](public/img/callmebackmaybe.png)
+.caption[Fig. X: I heard you like concurrency and obscure music jokes.]
+
+.footnote[[Ryan Dahl: Original Node.js presentation (JSConf 2009). JS Conf EU.Published 8 Jun 2012.](https://www.youtube.com/watch?v=ztspvPYybIY)]
+---
+class: middle, center
+
+> JavaScript was designed specifically to be used with an event loop. The culture of JavaScript is already geared towards evented programming.
+
+.footnote[[Ryan Dahl: Original Node.js presentation (JSConf 2009). JS Conf EU.Published 8 Jun 2012.](https://www.youtube.com/watch?v=ztspvPYybIY)]
+---
+class: middle, center
+
+### Node.js wants...
+
+# To provide a purely evented, non-blocking infrastructure to script highly concurrent programs.
+
+---
+class: middle, center
+
+# Design Goals
+
+#### No function should perform direct I/O, to receive info from disk, network, or another process, there must be a callback
+
+#### Low level. Stream everything. Do not remove functionality present at the POSIX layer.
+
+#### Have built-in support for the most important protocols: TCP, DNS, HTTP.
+
+#### Support many HTTP features.
+
+#### The API should be familiar to client-side JS programmers and old school UNIX hackers. Be platform independent. Don't reinvent.
+
+---
+class: middle, center
+
+# Evented programming is the primary paradigm for Node.js
+
+---
+class: middle, center
+
+# What type of language does Rust want to be?
+
+---
+class: middle, center
+
+# Rust is a systems programming language that runs blazingly fast, prevents segfaults, and guarantees thread safety.
+
+.footnote[https://www.rust-lang.org/]
+
+---
+class: middle, center
+
+# Rust is a ??????? ??????????? ???????? ???? ???? ????????? ????, ???????? ?????????, ??? ????????? ????? ??????.
+
+---
+class: middle, center
+
+# Rust *was originally* a systems level language for replacing C++ in Firefox
+
+---
+class: middle, center
+
+![sorry we're close](public/img/sorrywereclose.jpg)
+
+---
+class: middle, center
+
+![sorry we're close](public/img/sorrywereclosetothemetal.jpg)
+
+---
+class: middle, center
+
+![sorry we're close](public/img/sorrynotsorry.jpg)
+
+---
+class: middle, center
+
+# No run time.
+# No garbage collector.
+# OS Threads (1:1 threads).
+
+---
+class: middle, center
+
+# "Green Threads" (m:n threads)
+<hr/>
+![green threads](public/img/greenthreads.jpg)
+
+---
+class: middle, center
+
+# "Green Threads" (m:n threads)
+<hr/>
+
+
+---
+class: middle, center
+
+# Rust is a systems programming language designed to empower developers of all kinds to write fast, safe code.
+
+---
+class: middle, center
+
+# Rust wants to be a first class server side language.
+
+---
+class: middle, center
+
+![big question](public/img/question.jpg)
+## Should you write a web service with a systems level language?
+
+---
+class: middle, center
+
+# Should you write a webservice with a language designed to write a browser?
+
+---
+class: middle, center
+
+.half[.more-padding[![firefox nightly](public/img/firefoxnightly.png)]]
+
+## Rust was originally designed to replace C++ in Firefox
+
+---
+class: middle, center
+
+.half[.more-padding[![servo](public/img/servo.png)]]
+
+## Rust was originally designed to replace C++ in Firefox
+
+---
+class: middle, center
+
+![stylo](public/img/stylo.png)
+
+## Firefox Quantum shipped with a first-of-kind parallelized Style System, Stylo, last year.
+
+.footnote[Matthews, Josh. The Story of Stylo. Rust Belt Rust Conference, 2017. [slides](https://www.joshmatthews.net/rbr17/), [video](https://www.youtube.com/watch?v=Y6SSTRr2mFU)]
+
+---
+class: middle, center
+
+![program workingness](public/img/programworkingness.png)
+
+.footnote[Evans, Julia. "Learning systems programming with Rust". 11 September 2016. https://jvns.ca/blog/2016/09/11/rustconf-keynote/.]
+---
+class: middle, center
+
+![possible](public/img/possible.png)
+
+.footnote[Evans, Julia. "Learning systems programming with Rust". 11 September 2016. https://jvns.ca/blog/2016/09/11/rustconf-keynote/.]
+---
+class: middle, center
+
+![empowering](public/img/empowering.png)
+
+.footnote[Evans, Julia. "Learning systems programming with Rust". 11 September 2016. https://jvns.ca/blog/2016/09/11/rustconf-keynote/.]
+---
+class: middle, center
+
+![systems programmers](public/img/systemsprogrammers.png)
+
+.footnote[Evans, Julia. "Learning systems programming with Rust". 11 September 2016. https://jvns.ca/blog/2016/09/11/rustconf-keynote/.]
+---
+class: middle, center
+
+# Should you write a webservice with a language designed to write a browser?
+
+--
+
+# Yes.
+
+---
+class: middle, center
+
+# Concurrency vs. Memory
+
+---
+class: middle, center
+
+# Developer Experience
+
+---
+class: middle, center
+
+# Can Rust achieve the Ergonomics and Productivity required to make systems level control viable for Web Development?
+
+---
+class: middle, center
+
+![oxidizing source maps](public/img/oxidizingsourcemaps.png)
+
+.footnote[Fitzgerald, Nick. "Oxidizing Source Maps with Rust and WebAssembly". https://hacks.mozilla.org/2018/01/oxidizing-source-maps-with-rust-and-webassembly/ 18 January 2018.]
+
+---
+class: middle, center
+
+.sixtyfive[![scalajssource](public/img/scalajssourcebench.png)]
+
+.footnote[Fitzgerald, Nick. "Oxidizing Source Maps with Rust and WebAssembly". https://hacks.mozilla.org/2018/01/oxidizing-source-maps-with-rust-and-webassembly/ 18 January 2018.]
+---
+class: middle, center
+
+![maybe you dont need rust and wasm](public/img/maybeyoudontneedrust.png)
+
+---
+class: middle, center
+
+.half[.more-padding[![v8](public/img/fakev8.png)]]
+
+---
+class: middle, left
+
+# Speed Without Wizardry
+<hr/>
+
+> The “Oxidizing” article recounts my experience integrating Rust (compiled to WebAssembly) into the source-map JavaScript library. Although the JavaScript implementation was originally authored in idiomatic JavaScript style, as we profiled and implemented speed improvements, the code became hard to read and maintain. With Rust and its zero-cost abstractions, we found that there was no trade-off between performance and clean code.
+
+.footnote[Fitzgerald, Nick. "Speed Without Wizardry". http://fitzgeraldnick.com/2018/02/26/speed-without-wizardry.html]
+
+---
+class: center, middle
+
+# How did Rust get here?
+
+---
+class: middle, center
+
+![rust oss](public/img/rustoss.png)
+
+.left[.footnote[Turon, Aaron and Niko Matsakis. "Why wasn't I consulted? How Rust does OSS". Mozilla SF All Hands 2018. https://docs.google.com/presentation/d/1Cz0jGrAfFZVr-31aG586bnSZpCQusRvca93NleTI0l0/]]
+---
+class: middle, left
+
+> “Why wasn't I consulted” is the fundamental question of the web. It is the rule from which other rules are derived. Humans have a fundamental need to be consulted, engaged, to exercise their knowledge (and thus power), and no other medium that came before has been able to tap into that as effectively. 
+
+### .right[Paul Ford]
+
+.footnote[Ford, Paul. "The Web Is A Customer Service Platform." http://www.ftrain.com/wwic.html]
+---
+class: middle, left
+
+# "Consultation", Rust-style
+<hr/>
+- ### .left[All “major” decisions are preceded by an RFC]
+- ### .left[Goal: catalog tradeoffs and explore designs]
+- ### .left[Team drives to steady state and consensus]
+- ### .left[Final Comment Period]
+- ### .left[No New Rationale: decisions rest on prior, public debate]
+
+.footnote[Turon, Aaron and Niko Matsakis. "Why wasn't I consulted? How Rust does OSS". Mozilla SF All Hands 2018. https://docs.google.com/presentation/d/1Cz0jGrAfFZVr-31aG586bnSZpCQusRvca93NleTI0l0/]
+---
+class: middle, left
+
+> Lazy Consensus means that when you are convinced that you know what the community would like to see happen you can simply assume that you already have consensus and get on with the work.
+
+### .right[Apache Software Foundation]
+
+.footnote[Lazy Consensus. https://rave.apache.org/docs/governance/lazyConsensus.html]
+---
+class: middle, left
+
+# Articulate the Vision
+<hr/>
+- ### .left[“Thought Leadership”: leaders need to expose a way of thinking]
+- ### .left[Inspire the community toward a clear goal]
+- ### .left[Establish shared values]
+- ### .left[Identify and explain historical themes]
+
+.footnote[Turon, Aaron and Niko Matsakis. "Why wasn't I consulted? How Rust does OSS". Mozilla SF All Hands 2018. https://docs.google.com/presentation/d/1Cz0jGrAfFZVr-31aG586bnSZpCQusRvca93NleTI0l0/]
+---
+class: middle, left
+
+> Every good work of software starts by scratching a developer's personal itch.
+
+### .right[“The Cathedral and the Bazaar”]
+
+---
+class: middle, left
+
+# Rust's Roadmap Process
+<hr/>
+- ### .left[Vision and values happen at many scales]
+- ### .left[Roadmap helps people “itch” in the same way]
+- ### .left[… and also makes it easier to say “no”]
+- ### .left[Rust uses RFCs even for its roadmap]
+
+.footnote[Turon, Aaron and Niko Matsakis. "Why wasn't I consulted? How Rust does OSS". Mozilla SF All Hands 2018. https://docs.google.com/presentation/d/1Cz0jGrAfFZVr-31aG586bnSZpCQusRvca93NleTI0l0/]
+---
+class: 2-col
+
+.column.left[
+  ![naming](public/img/naming1.png)
+  .caption[Fig. X: I'd laugh, but tbh 30min is pretty reasonable]
+]
+
+.column.right[
+  # .right[Instead of (nervously?) laughing off how difficult language design is...]
+]
+
+.footnote[https://twitter.com/tlakomy/status/968128289830301696]
+
+---
+class: middle, center
+
+![naming](public/img/naming2.png)
+
+.footnote[https://twitter.com/ag_dubs/status/968523354713088005]
 
     </textarea>
     <script src="public/remark.js" type="text/javascript"></script>
