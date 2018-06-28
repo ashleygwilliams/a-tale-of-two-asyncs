@@ -6,6 +6,7 @@
     <link href="public/custom.css" type="text/css" rel="stylesheet">
   </head>
   <body>
+<span id="link">http://bit.ly/2-asyncs</span>
     <textarea id="source">
 
 class: 2-col
@@ -17,6 +18,7 @@ class: 2-col
 ## or: How Language Values Shape the Features We Build
 <br/>
 <br/>
+.center[[Slides](http://bit.ly/2-asyncs), [Repo](https://github.com/ashleygwilliams/a-tale-of-two-asyncs)]
 .center[Ashley Williams, [workerconf 2018]]
 ]
 
@@ -54,7 +56,7 @@ class: middle, center
 ---
 class: middle, center
 
-.smaller[![i used to work at npm](public/img/realeyes.jpg)]
+.sixtyfive[![i used to work at npm](public/img/realeyes.jpg)]
 
 ---
 class: middle, center
@@ -225,7 +227,7 @@ class: 2-col
 
 .column.right[
   ![genealogy of programming languages](public/img/languages.png)
-  .caption[Fig. X: This diagram definitely obviously makes sense.]
+  .caption[Fig. 4: This diagram definitely obviously makes sense.]
 ]
 
 .column.left[
@@ -239,13 +241,13 @@ class: 2-col
 class: middle, center
 
 ![it's a trap](public/img/trap.gif)
-.caption[Fig. X: I wish the fools on the internet would realize this.]
+.caption[Fig. 5: I wish the fools on the internet would realize this.]
 
 ---
 class: middle, center
 
 ![tools](public/img/tools.png)
-.caption[Fig. X: If you are using these tools you are way closer to the metal than I am. Maybe you are too close.]
+.caption[Fig. 6: If you are using these tools you are way closer to the metal than I am. Maybe you are too close.]
 
 # "Best Tool for the Job"
 
@@ -268,8 +270,9 @@ class: middle, center
 class: 2-col
 
 .column.left[
+  <br/>
   ![peter van roy](public/img/petervanroy.jpg)
-  .caption[Fig. 6: Computer Science is very very serious]
+  .caption[Fig. 7: Computer Science is very very serious]
 ]
 
 .column.right[
@@ -285,7 +288,7 @@ class: 2-col
 class: middle, center
 
 ![priciple programming paradigms](public/img/paradigms.png)
-.caption[Fig. 5: Peter Van Roy's Paradgim Genealogy]
+.caption[Fig. 8: Peter Van Roy's Paradgim Genealogy]
 
 .footnote[https://www.info.ucl.ac.be/~pvr/paradigmsDIAGRAMeng108.pdf]
 
@@ -300,7 +303,7 @@ class: middle
 > The way we are thinking about I/O makes things difficult.
 
 ![ryan dahl](public/img/dahl1.png)
-.caption[Fig. X: The font-size on that slide also makes I/O difficult.]
+.caption[Fig. 9: The font-size on that slide also makes I/O difficult.]
 
 .footnote[[Ryan Dahl: Original Node.js presentation (JSConf 2009). JS Conf EU.Published 8 Jun 2012.](https://www.youtube.com/watch?v=ztspvPYybIY)]
 
@@ -342,7 +345,7 @@ class: middle, center
 # Solution 1: Threads
 
 ![kitten with thread](public/img/kittenthreads.jpg)
-.caption[Fig. X: Kitten used thread! Ryan Dahl does not care for this one bit.]
+.caption[Fig. 10: Kitten used thread! Ryan Dahl does not care for this one bit.]
 
 ---
 class: middle, center
@@ -355,14 +358,14 @@ class: middle, center
 class: middle, center
 
 ![nginx vs apache reqs per sec](public/img/nginx-apache-reqs-sec.png)
-.right[.caption[Fig. X: There's a lot going on here, but the main takeway is that both nginx and apache can support a whole bunch of concurrent connections.]]
+.right[.caption[Fig. 11: There's a lot going on here, but the main takeway is that both nginx and apache can support a whole bunch of concurrent connections.]]
 
 .footnote[https://blog.webfaction.com/2008/12/a-little-holiday-present-10000-reqssec-with-nginx-2/. 18 Dec 2008]
 ---
 class: middle, center
 
 ![nginx vs apache concurrency vs memory](public/img/nginx-apache-memory.png)
-.caption[Fig. X: Apache's memory usage grows with concurrent connections in benchmark with dubious design.]
+.caption[Fig. 12: Apache's memory usage grows with concurrent connections in this benchmark with dubious design.]
 
 .footnote[https://blog.webfaction.com/2008/12/a-little-holiday-present-10000-reqssec-with-nginx-2/. 18 Dec 2008]
 
@@ -377,7 +380,7 @@ class: 2-col
 
 .column.right[
   ![expensive threads](public/img/expensivethreads.png)
-  .caption[Fig. X: I know, I know. This is fur and not even threads. But you get the joke. Also don't buy fur, mmkay?]
+  .caption[Fig. 13: I know, I know. This is fur and not even threads. But you get the joke. Also don't buy fur, mmkay?]
 ]
 
 ---
@@ -414,7 +417,7 @@ class: middle, center
 > Callbacks is how I/O should work.
 
 ![call me back maybe](public/img/callmebackmaybe.png)
-.caption[Fig. X: I heard you like concurrency and obscure music jokes.]
+.caption[Fig. 14: I heard you like concurrency and obscure music jokes.]
 
 .footnote[[Ryan Dahl: Original Node.js presentation (JSConf 2009). JS Conf EU.Published 8 Jun 2012.](https://www.youtube.com/watch?v=ztspvPYybIY)]
 ---
@@ -470,7 +473,7 @@ class: middle, center
 ---
 class: middle, center
 
-# Rust *was originally* a systems level language for replacing C++ in Firefox
+# Rust *was originally* a systems level language for replacing C++ in Firefox.
 
 ---
 class: middle, center
@@ -492,31 +495,140 @@ class: middle, center
 
 # No run time.
 # No garbage collector.
-# OS Threads (1:1 threads).
+# No segfaults.
+# Static typing.
 
 ---
 class: middle, center
 
-# "Green Threads" (m:n threads)
-<hr/>
-![green threads](public/img/greenthreads.jpg)
+![compiler](public/img/compiler.png)
+.caption[Fig. 19: THANK U BASED COMPILER!]
 
+.footnote[Baille, Lee. Illustrated Adventure Guide. RustConf 2016. https://www.slideshare.net/LizBaillie/rustconf-2016-illustrated-adventure-guide-65894363]
 ---
 class: middle, center
 
-# "Green Threads" (m:n threads)
-<hr/>
+.sixtyfive[![compiler pair](public/img/compilerpair.png)]
 
-
+.footnote[https://twitter.com/ag_dubs/status/1008016418657353728]
 ---
 class: middle, center
 
 # Rust is a systems programming language designed to empower developers of all kinds to write fast, safe code.
 
 ---
+class: 2-col
+
+.column.right[
+  <br/>
+  .left[```
+  cargo build
+  cargo run
+  cargo doc
+  cargo test
+  ```]
+  ![crates.io](public/img/crates.png)
+  .caption[Fig. 15: The packages are called crates. The tool is called cargo.]
+]
+
+.column.left[
+  <br/>
+  # First class package management
+
+  - ### .left[build tool]
+  - ### .left[documenation generator]
+  - ### .left[testing]
+  - ### .left[dependency mgmt]
+]
+
+---
+class: middle, center
+
+![cratesio](public/img/cratesio.png)
+.caption[Fig. 16: We call this the "pool table" design. We don't mean it as a compliment.]
+
+.footnote[https://crates.io/]
+
+---
+class: middle, center
+
+![working groups](public/img/domainwgs.png)
+
+.footnote[Turon, Aaron. "Announcing the 2018 Domain Working Groups!". https://internals.rust-lang.org/t/announcing-the-2018-domain-working-groups/6737. 10 February 2018.]
+---
+class: middle, center
+
+# Rust wants to be a first class server-side language.
+
+---
+class: middle, center
+
+![mio](public/img/mio.png)
+
+.footnote[https://carllerche.github.io/mio/mio/index.html]
+---
+class: middle, center
+
+![futures](public/img/futures.png)
+
+.footnote[https://docs.rs/futures/0.2.1/futures/]
+
+---
+class: middle, center
+
+![core futures](public/img/corefutures.png)
+
+.footnote[https://doc.rust-lang.org/nightly/core/future/trait.Future.html]
+---
+class: middle, center
+
+![tokio](public/img/tokio.png)
+
+# Futures + `mio` = `tokio`
+
+.footnote[https://tokio.rs/]
+
+---
+class: middle, center
+
+![rust as node system](public/img/rustsystem.jpg)
+
+---
+class: middle, left
+
+# The Long Term Vision
+<hr/>
+```
+async fn serve(addr: SocketAddr) -> io::Result<()> {
+    let socket = TcpListener::bind(&addr)?;
+    println!("Listening on: {}", addr);
+
+    async for (conn, _) in socket.incoming() {
+        // with Tokio, read and write components are distinct:
+        let (reader, writer) = conn.split();
+
+        thread::spawn_task(async {
+            match await copy(reader, writer) {
+                Ok((amt, _, _)) => println!("wrote {} bytes to {}", amt, addr),
+                Err(e) => println!("error on {}: {}", addr, e),
+            };
+            Ok(())
+        });
+    }
+
+    Ok(())
+}
+```
+
+.footnote[Tokio Reform RFC. https://github.com/aturon/tokio-rfcs/blob/tokio-reform/tokio-reform.md]
+---
 class: middle, center
 
 # Rust wants to be a first class server side language.
+
+--
+
+# But should it?
 
 ---
 class: middle, center
@@ -593,13 +705,85 @@ class: middle, center
 ---
 class: middle, center
 
+# Speed, Safety, Productivity:
+# Pick 3
+
+---
+class: middle, center
+
+# ⚠️ Productivity ⚠️
+
+---
+class: middle, center
+
+![developer experience](public/img/developerexperience.gif)
+
 # Developer Experience
+
+---
+class: middle, center
+
+![developer experience](public/img/developerexperience2.gif)
+
+# Developer Experience
+
+---
+class: middle, center
+
+![developer experience](public/img/developerexperience3.gif)
+
+# Developer Experience
+
+---
+class: middle, left
+
+> The history of every major galactic civilization tends to pass through three distinct and recognizable phases, those of Survival, Inquiry and Sophistication, otherwise known as the How, Why, and Where phases. For instance, the first phase is characterized by the question ‘How can we eat?’, the second by the question ‘Why do we eat?’ and the third by the question, ‘Where shall we have lunch?’
+
+### .right[Douglas Adams]
+#### .right[The Hitchhiker's Guide To The Galaxy]
+
+.footnote[Tao, Terry. "There’s more to mathematics than rigour and proofs". https://terrytao.wordpress.com/career-advice/theres-more-to-mathematics-than-rigour-and-proofs/]
+
+---
+class: middle, left
+
+# Stages of Learning
+
+- ### .left[Pre-Rigorous (Survival)] - blindly apply formalism, very intuitive
+- ### .left[Rigorous (Inquiry)] - intense "proper" applicaiton of formalism
+- ### .left[Post-Rigorous (Sophistication)] - a return to intuition, with the support of deeply understood formalism
+
+.footnote[Tao, Terry. "There’s more to mathematics than rigour and proofs". https://terrytao.wordpress.com/career-advice/theres-more-to-mathematics-than-rigour-and-proofs/]
+
+---
+class: middle, center
+
+# Rust tends to build features for the Survival and Sophistication stages.
+
+--
+
+# The folks in the Inquiry stage find this incredibley frustrating.
+
+---
+class: middle, center
+
+# We don't have all the answers.
+
+--
+
+# But we are trying our best to ask the right questions.
 
 ---
 class: middle, center
 
 # Can Rust achieve the Ergonomics and Productivity required to make systems level control viable for Web Development?
 
+---
+class: middle, center
+
+![most loved](public/img/mostloved.png)
+
+.footnote[https://insights.stackoverflow.com/survey/2018/#most-loved-dreaded-and-wanted]
 ---
 class: middle, center
 
@@ -645,6 +829,13 @@ class: middle, center
 
 .left[.footnote[Turon, Aaron and Niko Matsakis. "Why wasn't I consulted? How Rust does OSS". Mozilla SF All Hands 2018. https://docs.google.com/presentation/d/1Cz0jGrAfFZVr-31aG586bnSZpCQusRvca93NleTI0l0/]]
 ---
+class: middle, center
+
+.smaller[![rust core](public/img/rustcore.png)]
+
+.footnote[https://www.rust-lang.org/en-US/team.html]
+
+---
 class: middle, left
 
 > “Why wasn't I consulted” is the fundamental question of the web. It is the rule from which other rules are derived. Humans have a fundamental need to be consulted, engaged, to exercise their knowledge (and thus power), and no other medium that came before has been able to tap into that as effectively. 
@@ -660,7 +851,6 @@ class: middle, left
 - ### .left[All “major” decisions are preceded by an RFC]
 - ### .left[Goal: catalog tradeoffs and explore designs]
 - ### .left[Team drives to steady state and consensus]
-- ### .left[Final Comment Period]
 - ### .left[No New Rationale: decisions rest on prior, public debate]
 
 .footnote[Turon, Aaron and Niko Matsakis. "Why wasn't I consulted? How Rust does OSS". Mozilla SF All Hands 2018. https://docs.google.com/presentation/d/1Cz0jGrAfFZVr-31aG586bnSZpCQusRvca93NleTI0l0/]
@@ -690,6 +880,7 @@ class: middle, left
 
 ### .right[“The Cathedral and the Bazaar”]
 
+.footnote[Not gonna cite this one because the dude that wrote this is a big jerk.]
 ---
 class: middle, left
 
@@ -701,27 +892,237 @@ class: middle, left
 - ### .left[Rust uses RFCs even for its roadmap]
 
 .footnote[Turon, Aaron and Niko Matsakis. "Why wasn't I consulted? How Rust does OSS". Mozilla SF All Hands 2018. https://docs.google.com/presentation/d/1Cz0jGrAfFZVr-31aG586bnSZpCQusRvca93NleTI0l0/]
----
-class: 2-col
-
-.column.left[
-  ![naming](public/img/naming1.png)
-  .caption[Fig. X: I'd laugh, but tbh 30min is pretty reasonable]
-]
-
-.column.right[
-  # .right[Instead of (nervously?) laughing off how difficult language design is...]
-]
-
-.footnote[https://twitter.com/tlakomy/status/968128289830301696]
 
 ---
 class: middle, center
 
-![naming](public/img/naming2.png)
+![rfcs repo](public/img/rfcs.png)
 
-.footnote[https://twitter.com/ag_dubs/status/968523354713088005]
+.footnote[https://github.com/rust-lang/rfcs/pulls]
+---
+class: middle, center
 
+![tokio reform rfcs](public/img/tokioreformrfc.png)
+
+.footnote[https://github.com/tokio-rs/tokio-rfcs/pulls?q=is%3Apr+is%3Aclosed]
+---
+class: middle, center
+
+![async rfc](public/img/asyncrfc1.png)
+![async rfc](public/img/asyncrfc2.png)
+
+.footnote[https://github.com/rust-lang/rfcs/pull/2394]
+
+---
+class: middle, left
+
+# Problems of Scale
+<hr/>
+- ### .left[RFC threads can get 100 civil, insightful comments in 24 hours]
+- ### .left[Information overload: there’s so much out there that no one can find anything]
+- ### .left[Never enough managers!]
+
+
+.left[.footnote[Turon, Aaron and Niko Matsakis. "Why wasn't I consulted? How Rust does OSS". Mozilla SF All Hands 2018. https://docs.google.com/presentation/d/1Cz0jGrAfFZVr-31aG586bnSZpCQusRvca93NleTI0l0/]]
+---
+class: middle, left
+
+# The Role of Pluralism
+<hr/>
+- ### .left[Not everyone will share all values; that’s OK]
+- ### .left[Not everyone will interpret values the same way; that’s OK too]
+- ### .left[Making room for a diversity of values makes for a better product]
+- ### .left[Project leaders must turn this input into a singular, coherent vision]
+
+.left[.footnote[Turon, Aaron and Niko Matsakis. "Why wasn't I consulted? How Rust does OSS". Mozilla SF All Hands 2018. https://docs.google.com/presentation/d/1Cz0jGrAfFZVr-31aG586bnSZpCQusRvca93NleTI0l0/]]
+
+---
+class: middle, center
+
+# What's the point of all of this?
+
+
+---
+class: middle, center
+
+# I don't think that Rust, especially its async story, would be the same if it were not for Node
+
+---
+class: middle, center
+
+# Node.js exists for a very specific reason, and is a response to the historical and material situation it was written in.
+
+--
+
+# Rust, is, at least, partially a response to Node.
+
+---
+class: middle, center
+
+# However...
+
+---
+class: middle, center
+
+# I think there are ways that Node.js, and JavaScript, can also respond to Rust.
+
+---
+class: center, middle
+
+# Rust and JavaScript have not rearticulated their goals and audience in a long time.
+
+--
+
+# As a result, I think there is a lack of overall vision.
+
+---
+class: middle, center
+
+# A lack of vision causes, at best, a mismatch in expectations.
+
+---
+class: middle, center
+
+# A lack of vision can also have much, much worse implications.
+
+---
+class: middle, center
+
+.half[![bjarne stroustrup](public/img/bjarne.jpg)]
+# Bjarne Stroustrup
+## Creator of C++
+
+.footnote[https://en.wikiquote.org/wiki/File:BjarneStroustrup.jpg]
+---
+class: middle, left
+
+> Many/most people in WG21 are working independently towards non-shared goals. Individually,
+many (most?) proposals make sense. Together they are insanity to the point of endangering the
+future of C++.
+
+.footnote[Stroustrup, Bjarne. "Remember the Vasa!" http://open-std.org/JTC1/SC22/WG21/docs/papers/2018/p0977r0.pdf. 6 March 2018.]
+
+---
+class: middle, center
+
+# Remember the Vasa!
+
+![vasa](public/img/vasa.jpg)
+
+---
+class: middle, left
+
+### The Vasa (or Wasa) was a Swedish galleon , one of the largest and most heavily armed warships of its time. Already at the beginning of its maiden voyage on 10 August 1628, the Vasa sank after only about 1300 meters driving distance in normal swell due to serious structural instability.
+
+.footnote[https://de.wikipedia.org/wiki/Vasa_(Schiff)]
+---
+class: middle, left
+
+> We need a reasonably coherent language that can be used by “ordinary programmers” whose
+main concern is to ship great applications on time. We now have about 150 cooks; that’s not a
+good way to get a tasty and balanced meal.
+
+> We are on the path to something that could destroy C++. We must get off that path!
+
+.footnote[Stroustrup, Bjarne. "Remember the Vasa!" http://open-std.org/JTC1/SC22/WG21/docs/papers/2018/p0977r0.pdf. 6 March 2018.]
+---
+class: middle, center
+
+.sixtyfive[![vasa crash](public/img/vasacrash.png)]
+
+.footnote[https://de.wikipedia.org/wiki/Vasa_(Schiff)#/media/File:Voyage_of_the_Vasa_Locator.svg]
+
+---
+class: middle, center
+
+# Ergonomics and Productivity are the determinants by which the success of any programming language will be measured.
+
+---
+class: middle, center
+
+# In order to get those right, we need our users to be in the room.
+
+---
+class: middle, center
+
+> To make Go successful we need everyone's help, and everyone isn't here.
+
+### .right[Russ Cox]
+
+.footnote["Keynote: Go, Open Source, Community" Gophercon 2015. https://blog.golang.org/open-source]
+
+---
+class: middle, left
+
+> The major problem caused by the unavailability of feature uniformity is that the size of the language increases, which in turn, results into a longer learning curve.
+
+.footnote[Farooq MS, Khan SA, Ahmad F, Islam S, Abid A (2014) An Evaluation Framework and Comparative Analysis of the Widely Used First Programming Languages. PLoS ONE 9(2): e88941. https://doi.org/10.1371/journal.pone.0088941]
+---
+class: middle, left
+
+> This leads to an increase in the language complexity, in terms of the number and type of constructs. Resultantly, a language without feature uniformity usually demands the instructor to teach a subset of the language. A programmer can use this subset for writing code, but for reading other's code, comprehensive knowledge is required.
+
+.footnote[Farooq MS, Khan SA, Ahmad F, Islam S, Abid A (2014) An Evaluation Framework and Comparative Analysis of the Widely Used First Programming Languages. PLoS ONE 9(2): e88941. https://doi.org/10.1371/journal.pone.0088941]
+---
+class: middle, center
+
+# I'm a little sad that maybe JavaScript is becoming *not* a great First Programming Language
+
+--
+
+# But moreso, I'm genuinely sad that if that *is* true, it likely happened by accident
+
+---
+class: middle, center
+
+# I'd like to see all language communities better articulate their visions.
+
+---
+class: middle, center
+
+# I'd like to see more (requests for) feedback, from a wide range of people.
+
+---
+class: middle, center 
+
+# This is not always fun.
+---
+class: middle, center
+
+# This is definitely uncomfortable.
+
+---
+class: middle, center
+
+# It is the work to be done!
+
+---
+class: middle, center
+
+# And I'm excited to do it. 
+# I hope more folks will join us.
+
+---
+class: 2-col
+
+.column.left[
+<br/>
+<br/>
+<br/>
+# Thanks
+
+### Ashley Williams, [@ag_dubs](https://twitter.com/ag_dubs)
+### [bit.ly/2-asyncs](http://bit.ly/2-asyncs)
+
+#### PRs Welcome! https://github.com/ashleygwilliams/a-tale-of-two-asyncs
+]
+
+.column.right[
+<br/>
+<br/>
+  ![airtrain](public/img/airtrain.jpg)
+  .caption[Fig. 18: Looking back on the Air Train at the Munich Airport.]
+]
     </textarea>
     <script src="public/remark.js" type="text/javascript"></script>
     <script type="text/javascript">

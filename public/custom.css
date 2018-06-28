@@ -48,6 +48,7 @@ pre {
   padding: 10px;
   margin: 10px;
   border: solid black 1px;
+  overflow: hidden;
 }
 
 .column.right {float:left}
@@ -133,4 +134,12 @@ blockquote::before {
   font-style: italic;
   color: darkgray;
   margin-right: 20px;
+}
+
+#link {
+  position: absolute;
+  top: 15px;
+  right: 120px;
+  z-index: 9999999;
+  color: darkgray;
 }
