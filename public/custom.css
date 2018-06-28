@@ -137,6 +137,7 @@ blockquote::before {
 }
 
 #link {
+  font-size: 0.8em;
   position: absolute;
   top: 15px;
   right: 120px;
