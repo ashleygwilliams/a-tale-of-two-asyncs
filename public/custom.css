@@ -17,6 +17,10 @@ h1, h2, h3, h4, h5, .overlay {
   width: 80%;
 }
 
+.third img {
+  width: 33%;
+}
+
 .half img {
   width: 50%;
 }
