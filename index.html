@@ -764,6 +764,43 @@ class: middle, left
 .footnote[Tao, Terry. "There’s more to mathematics than rigour and proofs". https://terrytao.wordpress.com/career-advice/theres-more-to-mathematics-than-rigour-and-proofs/]
 
 ---
+class: middle, left
+
+# Stroustrup's Rule
+
+- ## For new features, people insist on LOUD explicit syntax.
+- ## For established features, people want terse notation.
+
+.footnote[Herman, Dave. "Stroustrup's Rule and Layering Over Time". https://thefeedbackloop.xyz/stroustrups-rule-and-layering-over-time/. 15 December 2016.]
+
+---
+class: middle, left
+
+```
+let file = match File::open("file.txt") {  
+    Ok(file) => file,
+    Err(err) => { return err; }
+}
+```
+
+```
+let file = try!(File::open("file.txt"));
+```
+
+```
+let file = File::open("file.txt")?;  
+```
+
+---
+class: middle, left
+
+# The Mechanism is not the Model
+
+> I see this a lot in standards and design: as we spend more and more of our time swimming in formalisms like specs, semantics, or implementations, it's easy for us to overlook those "fuzzier intuitions." Just like in mathematics, rigorous tools like specs help us to be precise, but the mechanism of our designs and the developer's mental model they support are two separate things. 
+
+.footnote[Herman, Dave. "The Mechanism is not the Mental Model". https://thefeedbackloop.xyz/the-mechanism-is-not-the-mental-model/. 01 December 2016.]
+
+---
 class: middle, center
 
 # Rust tends to build features for the Survival and Sophistication stages.
@@ -1119,6 +1156,15 @@ class: middle, center
 # I'd like to see more (requests for) feedback, from a wide range of people.
 
 ---
+class: middle, center
+
+# I'd like to see a greater more visible realization that the artifacts we are build are historical artifacts. 
+
+--
+
+# Products of their time. A time that is certainly going to change.
+
+---
 class: middle, center 
 
 # This is not always fun.
@@ -1126,6 +1172,24 @@ class: middle, center
 class: middle, center
 
 # This is definitely uncomfortable.
+
+---
+class: middle, center
+
+# The technology we will is NOT the rationally inevitable trends.
+
+--
+
+# It's the result of contingent turns of history.
+
+---
+class: middle, center
+
+# History is going to move forward.
+
+--
+
+# We need to be prioritizing the work of understanding that history, and we are not.
 
 ---
 class: middle, center
